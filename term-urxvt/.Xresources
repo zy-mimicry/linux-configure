@@ -1,0 +1,91 @@
+
+!! < imcatsee@sina.com >
+!Note: Test pass for Ubuntu 14.04
+!>> 1. sudo apt-get install rxvt-unicode.
+!>> 2. install some fonts for your terminal.
+!>>> 2.1 Liberation Mono ==> sudo apt-get install ttf-liberation
+!>>> 2.2 Terminus        ==> sudo apt-get install xfonts-terminus
+!>>> 2.3 Source Code Pro ==> From github <adobe-fonts/source-code-pro>.
+!
+!>> 3. Down some tools for your terminal from github.
+!>>> 3.1 Just like the keyword ==> 'urxvt'
+!>>> eg. perl-urxvt
+
+!!!-{{{
+!!Note: You can find some code-snippets from github <muennich/urxvt-perls> and <LeonGr/urxvt-snazzy>
+
+Rxvt.preeditType:				Root
+Xft.dpi:                        109
+URxvt*termName:                 rxvt-256color
+!URxvt*font:                    xft:Terminus:size=13:Bold
+!URxvt*font:                    xtt:Source Code Pro:size=14
+URxvt*font:                     xft:Liberation Mono:size=13
+Rxvt.saveLines:					10000
+Rxvt.menu:						/etc/X11/rxvt.menu
+URxvt*lineSpace:                1
+URxvt.letterSpace:              -1
+URxvt.iso14755:                 false
+URxvt.iso14755_52:              false
+URxvt*geometry:                 65x17
+URxvt.scrollBar:                false
+URxvt.internalBorder:           10
+!URxvt*loginShell:               true
+
+
+!!-< Common >-!!
+URxvt.perl-ext-common:			keyboard-select,default,urxvt-complete,color-themes,tabbed
+
+!! Clipboard...
+URxvt.keysym.Shift-Control-C:   perl:clipboard:copy
+URxvt.keysym.Shift-Control-V:   perl:clipboard:paste
+URxvt.clipboard.autocopy:		true
+
+!tabs
+URxvt.tabbed.tab-fg:			12
+URxvt.tabbed.tab-bg:			0
+URxvt.tabbed.tabbar-fg:			4
+!
+!!-< urxvt-perl >-!!
+!! URxvt.perl-lib: /your/folder/ ==> we use $HOME/.urxvt/ext
+URxvt.keysym.M-Escape:    perl:keyboard-select:activate
+URxvt.keysym.M-s:         perl:keyboard-select:search
+
+!! Other plagins.
+!!-< urxvt-complete >-!!
+!!-< urxvt-theme-switch >-!!
+
+!!-< Base Color >-!!
+*background:   #282a36
+*foreground:   #eff0eb
+*cursorColor:  #9aedfe
+
+*color0:      #33303b
+*color8:      #4f4b58
+*color1:      #ff5c57
+*color9:      #ff5c57
+*color2:      #5af78e
+*color10:     #5af78e
+*color3:      #f3f99d
+*color11:     #f3f99d
+*color4:      #57c7ff
+*color12:     #57c7ff
+*color5:      #ff6ac1
+*color13:     #ff6ac1
+*color6:      #9aedfe
+*color14:     #9aedfe
+*color7:      #eff0eb
+*color15:     #eff0eb
+
+!!!-}}}
+
+!!! -- > some commands for help < --
+!!! -- | man -Pcat urxvt | sed -n '/th: b/,/^B/p'|sed '$d'|sed '/^ \{7\}[a-z]/s/^ */^/g' | sed -e :a -e 'N;s/\n/@@/g;ta;P;D' | sed 's,\^\([^@]\+\)@*[\t ]*\([^\^]\+\),! \2\n! URxvt*\1\n\n,g' | sed 's,@@\(  \+\),\n\1,g' | sed 's,@*$,,g' | sed '/^[^!]/d' | tr -d "'\`"
+!!!
+
+!! help !!
+!Shift+ ↓ new tab
+!Shift+ ← go to left tab
+!Shift+ → go to right tab
+!Ctrl+ ← move tab to the left
+!Ctrl+ → move tab to the right
+!Ctrl+D: close tab
