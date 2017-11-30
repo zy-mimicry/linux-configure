@@ -1,0 +1,6 @@
+Rubbish :=$(shell perl deal.PL)
+
+.PHONY : nop
+nop: 
+	@echo $(IM_TOP) "[makefile]"
+	@echo "done."

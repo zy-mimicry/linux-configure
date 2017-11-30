@@ -1,0 +1,8 @@
+CONFIG_STTT="jfksjkfksjf"
+CONFIG_STRING="???"
+CONFIG_PPP="jjj"
+
+#|-- ^History^: 2017-11-29 ^TODO^: . ^PR^:  ^Whoami^:  --|
+CONFIG_CRYPTO_NULL=y
+CONFIG_MTK_MD_SBP_CUSTOM_VALUE="0"
+#|-- ^History^: 2017-11-29 ^TODO^: . ^PR^:  ^Whoami^:  --|

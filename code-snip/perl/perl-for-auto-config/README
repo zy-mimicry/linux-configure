@@ -1,0 +1,17 @@
+# - * - mode : README  - * -
+
+** TODO **
+The perl script which named 'deal.PL' is a auto-deal Kernel's config-files.
+
+** TEST **
+You can test the script under the directory, use the test.sh and check the out-file.
+[out-file]: kernel-4.4/arch/arm64/configs/A70AXLTMO_certification_defconfig 
+[in-file] : ./file.in.conf 
+[dealer]  : ./deal.PL
+
+** USEAGE **
+Just use : bash ./test.sh
+
+** NOTE **
+Please pay attention to the format of the file.in.conf.
+
