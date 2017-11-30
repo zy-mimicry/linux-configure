@@ -1,6 +1,12 @@
-Rubbish :=$(shell perl deal.PL)
+#Makefile.test
+
+#TODO: You can use this like below. It's not a command !
+#Rubbish :=$(shell perl deal.PL)
 
 .PHONY : nop
-nop: 
+nop: clean 
 	@echo $(IM_TOP) "[makefile]"
+	$(shell perl deal.PL)
 	@echo "done."
+clean:
+	-@rm file.out -f

@@ -1,6 +1,6 @@
-CONFIG_STTT="jfksjkfksjf"
-CONFIG_STRING="???"
-CONFIG_PPP="jjj"
+CONFIG_STRING="hello world"
+CONFIG_NUMBER=100000
+#CONFIG_CRYPTO_NULL=n
 
 #|-- ^History^: 2017-11-29 ^TODO^: . ^PR^:  ^Whoami^:  --|
 CONFIG_CRYPTO_NULL=y
