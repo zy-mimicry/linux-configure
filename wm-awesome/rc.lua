@@ -10,6 +10,16 @@ require("naughty")
 -- Load Debian menu entries
 require("debian.menu")
 
+require("vain")
+vain.widgets.terminal = "rxvt-unicode"
+
+function footerm(cmd)
+    awful.util.spawn("rxvt -e " .. cmd)
+end
+
+vain.widgets.terminal = footerm
+
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -38,11 +48,14 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
 beautiful.init("/usr/share/awesome/themes/default/theme.lua")
+-- beautiful.init(os.getenv("HOME") .. "/.config/awesome/extended_default_theme.lua")
+
 
 -- This is used later as the default terminal and editor to run.
 -- terminal = "x-terminal-emulator"
-terminal = "terminator"
+-- terminal = "terminator"
 -- terminal = "rxvt-unicode"
+terminal = "gnome-terminal"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 
