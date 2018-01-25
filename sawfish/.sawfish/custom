@@ -1,0 +1,18 @@
+;; Sawfish user customization -- do not edit by hand!
+;; Use the configurator instead.
+;; sawfish version 1.12.90, written Wed Jan 24 02:25:36 2018
+
+(custom-set-typed-variable (quote default-frame-style) (quote microGUI) (quote frame-style))
+(custom-set-typed-variable (quote wallpaper-display-type) (quote centered) (quote (choice auto/none centered tiled scaled streched zoom spanned)))
+(custom-set-typed-variable (quote wallpaper-setter) (quote "/home/yang/sawfish-build/theme/1516730592229.jpg") (quote file-name))
+(custom-set-typed-variable (quote root-wallpaper) (quote "/home/yang/sawfish-build/theme/1516730638365.jpg") (quote image))
+(custom-set-typed-variable (quote set-wallpaper-gnome2) (quote ()) (quote boolean))
+(custom-set-typed-variable (quote init-wallpaper) (quote t) (quote boolean))
+(custom-set-typed-variable (quote tooltips-show-doc-strings) (quote t) (quote boolean))
+(custom-set-typed-variable (quote tooltips-enabled) (quote t) (quote boolean) (quote sawfish.wm.ext.tooltips))
+(custom-set-typed-variable (quote use-custom-button-cursor-shape) (quote ()) (quote boolean))
+(custom-set-typed-variable (quote use-custom-font-color) (quote ()) (quote boolean))
+(custom-set-typed-variable (quote use-custom-font) (quote ()) (quote boolean))
+(custom-set-typed-variable (quote default-font) (quote ("Pango" . "Sans 12")) (quote font))
+(custom-set-keymap (quote global-keymap) (quote (keymap ((activate-workspace 4) . "W-4") ((activate-workspace 3) . "W-3") ((activate-workspace 2) . "W-2") ((activate-workspace 1) . "W-1") (restart . "W-o") (cabinet-switch . "C-TAB") (cabinet-switch . "Super-TAB") (cycle-windows . "W-TAB") (next-workspace . "W-Right") (previous-workspace . "W-Left"))))
+(custom-set-typed-variable (quote focus-windows-when-mapped) (quote ()) (quote boolean))
